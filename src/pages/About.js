@@ -23,11 +23,10 @@ const About = () => {
         <p>
           I work on platform and developer infrastructure at Wells Fargo,
           shipping the kind of unglamorous tooling that quietly saves entire
-          release cycles. Spring Boot, React, Postgres — boring on paper,
-          satisfying in practice.
+          release cycles.
         </p>
         <p>
-          Outside of work, I'm probably running through Brooklyn, taking film
+          Outside of work, I'm probably running on the west side highway, taking
           photos, or finding a new coffee shop to ruin my productivity at.
         </p>
       </div>
