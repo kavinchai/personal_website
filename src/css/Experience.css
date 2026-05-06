@@ -219,13 +219,3 @@
     font-size: 13.5px;
   }
 }
-
-@media (hover: none) {
-  .exp-tab:hover {
-    background: transparent;
-  }
-
-  .exp-detail-company:hover {
-    border-color: transparent;
-  }
-}
