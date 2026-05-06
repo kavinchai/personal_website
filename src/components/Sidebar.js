@@ -67,7 +67,6 @@ const Sidebar = ({ activeView, onChange }) => {
             <FiMail />
           </a>
         </div>
-        <div className="sidebar-copy">© 2025 — coded with care</div>
       </div>
     </aside>
   );
