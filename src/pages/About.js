@@ -5,7 +5,7 @@ const STATS = [
   { label: "Currently", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
   { label: "Coffees today", value: "too many" },
-  { label: "Hobbies", value: "run · shoot" },
+  { label: "Hobbies", value: "run · taking pics" },
 ];
 
 const About = () => {

@@ -13,7 +13,7 @@ const Experience = () => {
       <div className="view-header">
         <span className="view-label">02 — Experience</span>
         <h2 className="view-title">
-          A few years of <em>shipping at scale</em>.
+          A few years of <em>working</em>.
         </h2>
       </div>
 

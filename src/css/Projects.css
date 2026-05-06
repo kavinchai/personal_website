@@ -15,6 +15,21 @@
   padding: 2px 2px 8px;
 }
 
+@media (max-width: 1024px) {
+  .proj-view {
+    height: auto;
+    min-height: unset;
+    gap: 20px;
+  }
+
+  .proj-list {
+    flex: none;
+    min-height: unset;
+    overflow-y: visible;
+    padding: 0;
+  }
+}
+
 .proj-row {
   display: flex;
   flex-direction: column;
@@ -43,8 +58,8 @@
 .proj-row-head {
   display: flex;
   align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  gap: 10px 12px;
+  max-width: 100%;
 }
 
 .proj-row-num {
@@ -70,7 +85,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  flex: 1;
 }
 
 .proj-row-tags span {
@@ -89,7 +103,9 @@
   font-size: 17px;
   color: var(--text-subtle);
   flex-shrink: 0;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .proj-row-desc {

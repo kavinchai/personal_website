@@ -8,6 +8,20 @@
   padding-right: 8px;
 }
 
+@media (max-width: 1024px) {
+  .about-view {
+    height: auto;
+    min-height: unset;
+    overflow-y: visible;
+    padding-right: 0;
+    gap: 32px;
+  }
+
+  .about-body p {
+    font-size: 15px;
+  }
+}
+
 .about-body {
   max-width: 60ch;
   display: flex;
@@ -64,8 +78,23 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .about-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .about-stat-value {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-stat {
+    padding: 16px 14px;
   }
 }
