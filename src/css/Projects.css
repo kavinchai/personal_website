@@ -122,3 +122,14 @@
     padding-left: 0;
   }
 }
+
+@media (hover: none) {
+  .proj-row:hover .proj-row-title {
+    color: var(--text);
+  }
+
+  .proj-row:hover .proj-row-arrow {
+    transform: none;
+    color: var(--text-subtle);
+  }
+}

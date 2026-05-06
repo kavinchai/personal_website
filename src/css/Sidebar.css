@@ -283,3 +283,21 @@
     font-size: clamp(40px, 11vw, 60px);
   }
 }
+
+@media (hover: none) {
+  .sidebar-nav-item:hover {
+    background: transparent;
+  }
+
+  .sidebar-nav-item:hover .sidebar-nav-arrow {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+
+  .sidebar-socials a:hover {
+    background: var(--bg-elevated);
+    color: var(--text);
+    border-color: var(--border);
+    transform: none;
+  }
+}
