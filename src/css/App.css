@@ -1,0 +1,55 @@
+.app {
+  display: grid;
+  grid-template-columns: minmax(300px, 28%) 1fr;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.app-main {
+  height: 100vh;
+  overflow: hidden;
+  padding: 56px 64px 48px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.view-container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  animation: viewIn 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes viewIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .app-main {
+    height: auto;
+    overflow: visible;
+    padding: 24px 24px 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 20px 20px 48px;
+  }
+}

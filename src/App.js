@@ -1,30 +1,30 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Use Routes instead of Switch
-import FirstPage from "./pages/FirstPage";
-import Exp from "./pages/Exp";
-import Project from "./pages/Project";
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
-import Note from "./pages/Note";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
+import "./css/App.css";
+
+const VIEWS = {
+  about: About,
+  experience: Experience,
+  projects: Projects,
+};
 
 const App = () => {
-	return (
-		<Router>
-			<Routes>
-				<Route
-					path="/"
-					element={
-						<>
-							<FirstPage />
-							<About />
-							<Exp />
-							<Project />
-						</>
-					}
-				/>
-				{/* <Route path="/notes" element={<Note/>}></Route> */}
-			</Routes>
-		</Router>
-	);
+  const [activeView, setActiveView] = useState("about");
+  const ActiveComponent = VIEWS[activeView];
+
+  return (
+    <div className="app">
+      <Sidebar activeView={activeView} onChange={setActiveView} />
+      <main className="app-main">
+        <div key={activeView} className="view-container">
+          <ActiveComponent />
+        </div>
+      </main>
+    </div>
+  );
 };
 
 export default App;

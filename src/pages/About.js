@@ -1,38 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/About.css";
-import imag from "../imgs/kavin_image.png";
-import Navbar from "../components/Navbar";
+
+const STATS = [
+  { label: "Currently", value: "Wells Fargo" },
+  { label: "Based in", value: "New York" },
+  { label: "Coffees today", value: "too many" },
+  { label: "Hobbies", value: "run · shoot" },
+];
 
 const About = () => {
-	const [myName, setMyName] = useState(true);
-	return (
-		<>
-			<Navbar />
-			<div className="about-component">
-				<div className="about-container">
-					<h1 className="about-header header-txt">
-						{"<"}About{"/>"}
-					</h1>
-					<h2>Who's this?</h2>
-					<p>
-						My name's{" "}
-						<mark
-							className="highlight nameMark"
-							onClick={() => setMyName((prev) => !prev)}
-						>
-							{myName === true ? "Kavin" : "กวิน"}
-						</mark>
-						{", "}
-						I'm a software engineer in New York. I write code, take photos, and
-						run in my free time.
-					</p>
-					<h2>What's here?</h2>
-					<p>Projects and experience — the stuff I'd want someone to see.</p>
-					{/* <img src={imag} className="about-img-placeholder" alt="kavinImg" /> */}
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <div className="about-view">
+      <div className="view-header">
+        <span className="view-label">01 — About</span>
+        <h2 className="view-title">
+          Hi — I'm a software engineer who likes{" "}
+          <em>building things for fun</em>.
+        </h2>
+      </div>
+
+      <div className="about-body">
+        <p>
+          I work on platform and developer infrastructure at Wells Fargo,
+          shipping the kind of unglamorous tooling that quietly saves entire
+          release cycles. Spring Boot, React, Postgres — boring on paper,
+          satisfying in practice.
+        </p>
+        <p>
+          Outside of work, I'm probably running through Brooklyn, taking film
+          photos, or finding a new coffee shop to ruin my productivity at.
+        </p>
+      </div>
+
+      <div className="about-stats">
+        {STATS.map((s, i) => (
+          <div key={i} className="about-stat">
+            <span className="about-stat-label">{s.label}</span>
+            <span className="about-stat-value">{s.value}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default About;
