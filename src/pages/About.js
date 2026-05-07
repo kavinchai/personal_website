@@ -4,8 +4,8 @@ import "../css/About.css";
 const STATS = [
   { label: "Currently", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
-  { label: "Coffees today", value: "too many" },
-  { label: "Hobbies", value: "run · taking pics" },
+  { label: "Coffees today", value: "2 or 3" },
+  { label: "Hobbies", value: "Photography, Running, TFT" },
 ];
 
 const About = () => {
