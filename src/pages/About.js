@@ -23,7 +23,18 @@ const About = () => {
         <p>
           I write code for work, write more code when I get home, and somewhere
           in between find time to run, take photos, and drink an unreasonable
-          amount of coffee
+          amount of coffee.
+        </p>
+        <p>
+          I'm currently working on{" "}
+          <a
+            href="https://progress-log-five-delta.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ProgressLog
+          </a>
+          , a web app that lets you log your workouts and track your progress.
         </p>
         <p>
           I also like to play catan, shank golf shots, and butcher
