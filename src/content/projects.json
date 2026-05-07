@@ -1,40 +1,28 @@
 {
-  "data": [
-    {
-      "title": "FitTrack",
-      "desc": "Full-stack personal fitness tracker for weight, nutrition, workouts, strength progression, goals, and milestones. React + Vite frontend with Recharts visualizations, Spring Boot REST API with JWT auth, and PostgreSQL. Deployed on Vercel and Railway.",
-      "link": "https://github.com/kavinchai/WorkoutApp",
-      "tech": ["React", "Spring Boot", "PostgreSQL", "AWS"]
-    },
-    {
-      "title": "Expense Tracker",
-      "desc": "Full-stack expense tracking web application featuring a React frontend with real-time state management, C# ASP.NET Core REST API, and PostgreSQL database integration for personal financial management.",
-      "link": "https://github.com/kavinchai/ExpenseTracker",
-      "tech": ["React", ".NET ASP", "SupaBase"]
-    },
-    {
-      "title": "NASA AM Application",
-      "desc": "Application for additive manufacturing that converts PCB layouts to print path files of the STEP format. The software leverages CAD python libraries and a graphical user interface allowing users to configure desired PCB input parameters.",
-      "link": "https://github.com/kavinchai/NASA_AM_App",
-      "tech": ["Python", "CadQuery"]
-    },
-    {
-      "title": "Back End Pokedéx",
-      "desc": "A pokedex RESTful API that stores pokemon and trainer information in a relational database. Migrations are handled with liquibase and runs in a docker container. Users are authenticated with JWT.",
-      "link": "https://github.com/kavinchai/pokedex_backend",
-      "tech": ["Kotlin", "Spring", "Liquibase", "MariaDB"]
-    },
-    {
-      "title": "Smart Home Project",
-      "desc": "A system comprised of several digital devices synchronously operated by an android application. The HC-05 bluetooth module was used as a transmitter for connection between the circuit and the application. ",
-      "link": "https://youtu.be/J0m3PwPlISA",
-      "tech": ["Waveforms", "Arduino"]
-    },
-    {
-      "title": "Personal Website",
-      "desc": "This website uses React and is deployed on AWS amplify.",
-      "link": "",
-      "tech": ["React", "AWS Amplify"]
-    }
-  ]
+	"data": [
+		{
+			"title": "ProgressLog",
+			"desc": "Full-stack personal fitness logger for weight, nutrition, workouts, strength progression, goals, and milestones. React + Vite frontend with Recharts visualizations, Spring Boot REST API with JWT auth, and PostgreSQL. Deployed on Vercel and Railway.",
+			"link": "https://progress-log-five-delta.vercel.app/",
+			"tech": ["React", "Spring Boot", "PostgreSQL"]
+		},
+		{
+			"title": "NASA AM Application",
+			"desc": "Application for additive manufacturing that converts PCB layouts to print path files of the STEP format. The software leverages CAD python libraries and a graphical user interface allowing users to configure desired PCB input parameters.",
+			"link": "https://github.com/kavinchai/NASA_AM_App",
+			"tech": ["Python", "CadQuery"]
+		},
+		{
+			"title": "Smart Home Project",
+			"desc": "A system comprised of several digital devices synchronously operated by an android application. The HC-05 bluetooth module was used as a transmitter for connection between the circuit and the application.",
+			"link": "https://youtu.be/J0m3PwPlISA",
+			"tech": ["Waveforms", "Arduino"]
+		},
+		{
+			"title": "Back End Pokedéx",
+			"desc": "A pokedex RESTful API that stores pokemon and trainer information in a relational database. Migrations are handled with liquibase and runs in a docker container. Users are authenticated with JWT.",
+			"link": "https://github.com/kavinchai/pokedex_backend",
+			"tech": ["Kotlin", "Spring", "Liquibase", "MariaDB"]
+		}
+	]
 }

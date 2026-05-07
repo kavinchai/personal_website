@@ -60,7 +60,6 @@
   display: flex;
   align-items: center;
   gap: 10px 12px;
-  max-width: 100%;
 }
 
 .proj-row-num {
@@ -86,6 +85,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .proj-row-tags span {
@@ -119,6 +120,20 @@
 }
 
 @media (max-width: 768px) {
+  .proj-row-head {
+    flex-wrap: wrap;
+  }
+
+  .proj-row-tags {
+    margin-left: 0;
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .proj-row-arrow {
+    order: 2;
+  }
+
   .proj-row-desc {
     padding-left: 0;
   }

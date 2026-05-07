@@ -30,12 +30,12 @@ const Projects = () => {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="proj-row-title">{p.title}</span>
+                <div className="proj-row-tags">
+                  {p.tech.map((t, j) => (
+                    <span key={j}>{t}</span>
+                  ))}
+                </div>
                 {isLink && <FiArrowUpRight className="proj-row-arrow" />}
-              </div>
-              <div className="proj-row-tags">
-                {p.tech.map((t, j) => (
-                  <span key={j}>{t}</span>
-                ))}
               </div>
               <p className="proj-row-desc">{p.desc}</p>
             </Tag>
