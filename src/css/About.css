@@ -22,8 +22,12 @@
   }
 }
 
+.about-view .view-header {
+  max-width: 720px;
+}
+
 .about-body {
-  max-width: 60ch;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 14px;
