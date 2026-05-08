@@ -1,81 +1,81 @@
 {
-  "data": [
-    {
-      "date": "2023-02-26",
-      "title": "Software Engineer",
-      "company": "Wells Fargo",
-      "location": "NYC, New York",
-      "duration": "Feb 2023 - Present",
-      "url": "https://www.wellsfargo.com/",
-      "text": [
-        "Built a REST API microservice that automated test coverage reporting for release teams, eliminating a manual multi-system process and accelerating release cycles by ~30% across 400 business-critical applications.",
-        "Automated end-to-end user and project provisioning onto an enterprise performance testing platform, replacing a manual ticketing workflow and scaling onboarding capacity to 1,088 production applications.",
-        "Migrated internal performance testing platform from 15 on-prem servers to an Ansible-automated deployment architecture, cutting environment setup time from days to minutes and achieving ~$100K in annual infrastructure savings.",
-        "Maintained operational integrity of testing automation frameworks by hosting office hours for 200+ teams across the enterprise, troubleshooting CI/CD pipeline dependencies, and resolving integration challenges."
-      ]
-    },
-    {
-      "date": "2022-09-02",
-      "title": "Software Engineering Intern",
-      "company": "Bushel",
-      "location": "Fargo, North Dakota",
-      "duration": "May 2022 - August 2022",
-      "url": "https://bushelpowered.com/",
-      "text": [
-        "Deployed containerized REST APIs with comprehensive error handling and health monitoring, reliably processing 50K+ daily requests for core web and mobile applications.",
-        "Architected scalable relational database with automated schema migrations using Liquibase, eliminating deployment challenges and supporting rapid feature releases."
-      ]
-    },
-    {
-      "date": "2021-05-01",
-      "title": "Software Engineering Intern",
-      "company": "Mverge",
-      "location": "Bangkok, Thailand",
-      "duration": "May 2021 - August 2021",
-      "url": "https://www.mverge.co.th/",
-      "text": [
-        "Developed an internal document management portal from scratch using React, Node.js, and SQL, consolidating 1000+ company documents previously scattered across email and shared drives into a centralized repository."
-      ]
-    },
-    {
-      "date": "2020-05-15",
-      "title": "Electrical Engineering Intern",
-      "company": "Dairy Plus Co.",
-      "location": "Nakhon Sawan, Thailand",
-      "duration": "May 2020 - August 2020",
-      "url": "http://www.dutchmillinternational.com/en/site/home",
-      "text": [
-        "Streamlined visualization of production output by developing a Python app that displays brix produced per minute in real-time using the Tkinter GUI library.",
-        "Maintained quality control for the production line by manually operating SIG Combibloc filling machine in aseptic conditions.",
-        "Drafted preliminary quality assurance protocols by creating electrical directives derived from Thai manuals."
-      ]
-    },
-    {
-      "date": "2019-06-10",
-      "title": "Software Engineering Intern",
-      "company": "Tetra Pak",
-      "location": "Pune, India",
-      "duration": "June 2019 - August 2019",
-      "url": "https://www.tetrapak.com/",
-      "text": [
-        "Created several iterations of corporate intranet website by restructuring JavaScript web components.",
-        "Facilitated weekly conferences to ensure the development process among various teams is synchronously aligned and allocated Jira tasks accordingly."
-      ]
-    },
-    {
-      "date": "2016-05-05",
-      "title": "Various Roles",
-      "company": "Dutchmill",
-      "location": "Bangkok, Thailand",
-      "duration": "Summers from 2015 - 2018",
-      "url": "http://www.dutchmillinternational.com/en/site/home",
-      "text": [
-        "Delivered bulk dairy orders across hotels, restaurants, and convenience stores on a recurring multi-stop route.",
-        "Ran a coffee kiosk at multiple sky-train stations, taking orders and handling transactions during rush hours.",
-        "Created technical directives to update machine manuals for the STORK heat treatment equipment in replacement of obsolete cleaning-in-place systems.",
-        "Ran daily standups to coordinate team schedules and track progress during STORK equipment installation.",
-        "Helped maintain aqueduct systems alongside the mechanical team."
-      ]
-    }
-  ]
+	"data": [
+		{
+			"date": "2023-02-26",
+			"title": "Software Engineer",
+			"company": "Wells Fargo",
+			"location": "NYC, New York",
+			"duration": "Feb 2023 - Present",
+			"url": "https://www.wellsfargo.com/",
+			"text": [
+				"Built a REST API microservice that automated test coverage reporting for release teams, eliminating a manual multi-system process and accelerating release cycles by ~30% across 400 business-critical applications.",
+				"Automated end-to-end user and project provisioning onto an enterprise performance testing platform, replacing a manual ticketing workflow and scaling onboarding capacity to 1,088 production applications.",
+				"Migrated internal performance testing platform from 15 on-prem servers to an Ansible-automated deployment architecture, cutting environment setup time from days to minutes and achieving ~$550K in annual infrastructure savings.",
+				"Maintained operational integrity of testing automation frameworks by hosting office hours for 200+ teams across the enterprise, troubleshooting CI/CD pipeline dependencies, and resolving integration challenges."
+			]
+		},
+		{
+			"date": "2022-09-02",
+			"title": "Software Engineering Intern",
+			"company": "Bushel",
+			"location": "Fargo, North Dakota",
+			"duration": "May 2022 - August 2022",
+			"url": "https://bushelpowered.com/",
+			"text": [
+				"Deployed containerized REST APIs with comprehensive error handling and health monitoring, reliably processing 50K+ daily requests for core web and mobile applications.",
+				"Architected scalable relational database with automated schema migrations using Liquibase, eliminating deployment challenges and supporting rapid feature releases."
+			]
+		},
+		{
+			"date": "2021-05-01",
+			"title": "Software Engineering Intern",
+			"company": "Mverge",
+			"location": "Bangkok, Thailand",
+			"duration": "May 2021 - August 2021",
+			"url": "https://www.mverge.co.th/",
+			"text": [
+				"Developed an internal document management portal from scratch using React, Node.js, and SQL, consolidating 1000+ company documents previously scattered across email and shared drives into a centralized repository."
+			]
+		},
+		{
+			"date": "2020-05-15",
+			"title": "Electrical Engineering Intern",
+			"company": "Dairy Plus Co.",
+			"location": "Nakhon Sawan, Thailand",
+			"duration": "May 2020 - August 2020",
+			"url": "http://www.dutchmillinternational.com/en/site/home",
+			"text": [
+				"Streamlined visualization of production output by developing a Python app that displays brix produced per minute in real-time using the Tkinter GUI library.",
+				"Maintained quality control for the production line by manually operating SIG Combibloc filling machine in aseptic conditions.",
+				"Drafted preliminary quality assurance protocols by creating electrical directives derived from Thai manuals."
+			]
+		},
+		{
+			"date": "2019-06-10",
+			"title": "Software Engineering Intern",
+			"company": "Tetra Pak",
+			"location": "Pune, India",
+			"duration": "June 2019 - August 2019",
+			"url": "https://www.tetrapak.com/",
+			"text": [
+				"Created several iterations of corporate intranet website by restructuring JavaScript web components.",
+				"Facilitated weekly conferences to ensure the development process among various teams is synchronously aligned and allocated Jira tasks accordingly."
+			]
+		},
+		{
+			"date": "2016-05-05",
+			"title": "Various Roles",
+			"company": "Dutchmill",
+			"location": "Bangkok, Thailand",
+			"duration": "Summers from 2015 - 2018",
+			"url": "http://www.dutchmillinternational.com/en/site/home",
+			"text": [
+				"Delivered bulk dairy orders across hotels, restaurants, and convenience stores on a recurring multi-stop route.",
+				"Ran a coffee kiosk at multiple sky-train stations, taking orders and handling transactions during rush hours.",
+				"Created technical directives to update machine manuals for the STORK heat treatment equipment in replacement of obsolete cleaning-in-place systems.",
+				"Ran daily standups to coordinate team schedules and track progress during STORK equipment installation.",
+				"Helped maintain aqueduct systems alongside the mechanical team."
+			]
+		}
+	]
 }
