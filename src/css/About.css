@@ -40,6 +40,20 @@
   margin: 0;
 }
 
+.about-body a {
+  color: #e8712a;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.25s ease;
+}
+
+.about-body a:hover {
+  background-size: 100% 1px;
+}
+
 .about-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
