@@ -1,0 +1,166 @@
+.np-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  max-width: 420px;
+}
+
+.np-card.np-active:hover {
+  border-color: #1db954;
+  box-shadow: 0 4px 20px rgba(29, 185, 84, 0.1);
+  transform: translateY(-1px);
+}
+
+.np-album-art {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.np-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #1db954;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.np-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.np-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #1db954;
+}
+
+.np-label svg {
+  width: 14px;
+  height: 14px;
+}
+
+.np-status {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.np-subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-subtle);
+}
+
+.np-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.np-artist {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.np-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.np-bars span {
+  width: 3px;
+  border-radius: 2px;
+  background: #1db954;
+  animation: np-bounce 1.2s ease-in-out infinite;
+}
+
+.np-bars span:nth-child(1) {
+  height: 60%;
+  animation-delay: 0s;
+}
+
+.np-bars span:nth-child(2) {
+  height: 100%;
+  animation-delay: 0.2s;
+}
+
+.np-bars span:nth-child(3) {
+  height: 40%;
+  animation-delay: 0.4s;
+}
+
+@keyframes np-bounce {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.np-loading .np-status {
+  animation: np-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes np-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .np-card {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .np-album-art {
+    width: 44px;
+    height: 44px;
+  }
+
+  .np-title {
+    font-size: 13px;
+  }
+}

@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import Hobbies from "./pages/Hobbies";
 import ProgressLog from "./pages/ProgressLog";
 import "./css/App.css";
 
@@ -10,6 +11,7 @@ const VIEWS = {
   about: About,
   experience: Experience,
   projects: Projects,
+  hobbies: Hobbies,
 };
 
 const App = () => {
