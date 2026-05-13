@@ -1,5 +1,6 @@
 import React from "react";
 import NowPlaying from "../components/NowPlaying";
+import TopMusic from "../components/TopMusic";
 import "../css/Hobbies.css";
 
 const Hobbies = () => {
@@ -22,6 +23,17 @@ const Hobbies = () => {
             What's currently playing on my Spotify.
           </p>
           <NowPlaying />
+        </section>
+
+        <section className="hobbies-section">
+          <h3 className="hobbies-section-title">
+            <span className="hobbies-section-icon">🏆</span>
+            Top This Year
+          </h3>
+          <p className="hobbies-section-desc">
+            My most played songs and artists over the last 6 months.
+          </p>
+          <TopMusic />
         </section>
       </div>
     </div>
