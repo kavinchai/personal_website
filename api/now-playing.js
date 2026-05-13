@@ -27,7 +27,7 @@ async function getAccessToken() {
 }
 
 export default async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://kavinchai.vercel.app");
   res.setHeader("Access-Control-Allow-Methods", "GET");
 
   try {

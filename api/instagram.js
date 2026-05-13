@@ -11,12 +11,12 @@ async function refreshLongLivedToken() {
 }
 
 export default async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://kavinchai.vercel.app");
   res.setHeader("Access-Control-Allow-Methods", "GET");
   res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate=7200");
 
   try {
-    const limit = parseInt(req.query.limit) || 12;
+    const limit = Math.min(parseInt(req.query.limit) || 12, 50);
 
     const meRes = await fetch(
       `${BASE_URL}/me?fields=user_id,username&access_token=${ACCESS_TOKEN}`
