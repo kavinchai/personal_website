@@ -8,7 +8,7 @@ const STATS = [
   { label: "Hobbies", value: "Photography, Running, TFT" },
 ];
 
-const About = () => {
+const About = ({ onNavigate }) => {
   return (
     <div className="about-view">
       <div className="view-header">
@@ -28,9 +28,11 @@ const About = () => {
         <p>
           I'm currently working on{" "}
           <a
-            href="https://progress-log-five-delta.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
+            href="#progresslog"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate && onNavigate("progresslog");
+            }}
           >
             ProgressLog
           </a>

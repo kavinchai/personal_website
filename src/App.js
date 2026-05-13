@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import ProgressLog from "./pages/ProgressLog";
 import "./css/App.css";
 
 const VIEWS = {
@@ -13,6 +14,20 @@ const VIEWS = {
 
 const App = () => {
   const [activeView, setActiveView] = useState("about");
+
+  if (activeView === "progresslog") {
+    return (
+      <div className="app">
+        <Sidebar activeView={activeView} onChange={setActiveView} />
+        <main className="app-main">
+          <div key={activeView} className="view-container">
+            <ProgressLog onBack={() => setActiveView("projects")} />
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   const ActiveComponent = VIEWS[activeView];
 
   return (
@@ -20,7 +35,7 @@ const App = () => {
       <Sidebar activeView={activeView} onChange={setActiveView} />
       <main className="app-main">
         <div key={activeView} className="view-container">
-          <ActiveComponent />
+          <ActiveComponent onNavigate={setActiveView} />
         </div>
       </main>
     </div>
