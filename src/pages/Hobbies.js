@@ -1,6 +1,7 @@
 import React from "react";
 import NowPlaying from "../components/NowPlaying";
 import TopMusic from "../components/TopMusic";
+import InstagramGrid from "../components/InstagramGrid";
 import "../css/Hobbies.css";
 
 const Hobbies = () => {
@@ -14,6 +15,17 @@ const Hobbies = () => {
       </div>
 
       <div className="hobbies-sections">
+        <section className="hobbies-section">
+          <h3 className="hobbies-section-title">
+            <span className="hobbies-section-icon">📷</span>
+            Photography
+          </h3>
+          <p className="hobbies-section-desc">
+            Recent shots from my photography account.
+          </p>
+          <InstagramGrid />
+        </section>
+
         <section className="hobbies-section">
           <h3 className="hobbies-section-title">
             <span className="hobbies-section-icon">🎵</span>
