@@ -10,8 +10,8 @@ const SpotifyIcon = () => (
 const STATS = [
   { label: "Currently", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
-  { label: "Currently spamming", value: null },
   { label: "Hobbies", value: "Photography, Running, TFT" },
+  { label: "Currently spamming", value: null },
 ];
 
 const About = ({ onNavigate }) => {
@@ -70,7 +70,7 @@ const About = ({ onNavigate }) => {
 
       <div className="about-stats">
         {STATS.map((s, i) => (
-          <div key={i} className="about-stat">
+          <div key={i} className={`about-stat${s.label === "Currently spamming" ? " about-stat--spotify" : ""}`}>
             <span className="about-stat-label">{s.label}</span>
             {s.label === "Currently spamming" ? (
               <span className="about-stat-value">

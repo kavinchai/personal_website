@@ -33,7 +33,7 @@
 }
 
 .pl-intro {
-  max-width: 720px;
+  max-width: 860px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -97,7 +97,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 720px;
+  max-width: 860px;
 }
 
 .pl-tech-tag {
