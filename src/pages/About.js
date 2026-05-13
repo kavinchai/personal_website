@@ -11,7 +11,7 @@ const STATS = [
   { label: "Currently", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
   { label: "Hobbies", value: "Photography, Running, TFT" },
-  { label: "Currently spamming", value: null },
+  { label: "Currently spamming", value: null, spotify: true },
 ];
 
 const About = ({ onNavigate }) => {
@@ -70,9 +70,9 @@ const About = ({ onNavigate }) => {
 
       <div className="about-stats">
         {STATS.map((s, i) => (
-          <div key={i} className={`about-stat${s.label === "Currently spamming" ? " about-stat--spotify" : ""}`}>
+          <div key={i} className={`about-stat${s.spotify ? " about-stat--spotify" : ""}`}>
             <span className="about-stat-label">{s.label}</span>
-            {s.label === "Currently spamming" ? (
+            {s.spotify ? (
               <span className="about-stat-value">
                 {topTrack ? (
                   <a
