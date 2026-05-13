@@ -1,9 +1,9 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 import projects from "../content/projects.json";
 import "../css/Projects.css";
 
-const Projects = () => {
+const Projects = ({ onNavigate }) => {
   return (
     <div className="proj-view">
       <div className="view-header">
@@ -15,13 +15,26 @@ const Projects = () => {
 
       <div className="proj-list">
         {projects.data.map((p, i) => {
-          const isLink = !!p.link;
+          const hasShowcase = p.title === "ProgressLog";
+          const isLink = !hasShowcase && !!p.link;
           const Tag = isLink ? "a" : "div";
           return (
             <Tag
               key={i}
               {...(isLink
                 ? { href: p.link, target: "_blank", rel: "noreferrer" }
+                : {})}
+              {...(hasShowcase
+                ? {
+                    onClick: () => onNavigate && onNavigate("progresslog"),
+                    role: "button",
+                    tabIndex: 0,
+                    onKeyDown: (e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        onNavigate && onNavigate("progresslog");
+                      }
+                    },
+                  }
                 : {})}
               className="proj-row"
             >
@@ -35,7 +48,11 @@ const Projects = () => {
                     <span key={j}>{t}</span>
                   ))}
                 </div>
-                {isLink && <FiArrowUpRight className="proj-row-arrow" />}
+                {hasShowcase ? (
+                  <FiArrowRight className="proj-row-arrow" />
+                ) : (
+                  isLink && <FiArrowUpRight className="proj-row-arrow" />
+                )}
               </div>
               <p className="proj-row-desc">{p.desc}</p>
             </Tag>
