@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../css/About.css";
 
 const STATS = [
   { label: "Currently", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
-  { label: "Coffees today", value: "2 or 3" },
+  { label: "Currently spamming", value: null },
   { label: "Hobbies", value: "Photography, Running, TFT" },
 ];
 
 const About = ({ onNavigate }) => {
+  const [topTrack, setTopTrack] = useState(null);
+
+  const fetchTopTrack = useCallback(async () => {
+    try {
+      const res = await fetch("/api/top-track");
+      const data = await res.json();
+      if (data.hasTrack) {
+        setTopTrack(data);
+      }
+    } catch {
+      // silently fail
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchTopTrack();
+  }, [fetchTopTrack]);
+
   return (
     <div className="about-view">
       <div className="view-header">
@@ -48,7 +66,24 @@ const About = ({ onNavigate }) => {
         {STATS.map((s, i) => (
           <div key={i} className="about-stat">
             <span className="about-stat-label">{s.label}</span>
-            <span className="about-stat-value">{s.value}</span>
+            {s.label === "Currently spamming" ? (
+              <span className="about-stat-value">
+                {topTrack ? (
+                  <a
+                    href={topTrack.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="about-stat-link"
+                  >
+                    {topTrack.name} — {topTrack.artist}
+                  </a>
+                ) : (
+                  "..."
+                )}
+              </span>
+            ) : (
+              <span className="about-stat-value">{s.value}</span>
+            )}
           </div>
         ))}
       </div>
