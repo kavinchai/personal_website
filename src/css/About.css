@@ -90,6 +90,17 @@
   letter-spacing: -0.01em;
 }
 
+.about-stat-link {
+  color: #1db954;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.about-stat-link:hover {
+  color: #1ed760;
+}
+
 @media (max-width: 1280px) {
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
