@@ -6,6 +6,7 @@ const NAV_ITEMS = [
 	{ id: "about", num: "01", label: "About" },
 	{ id: "experience", num: "02", label: "Experience" },
 	{ id: "projects", num: "03", label: "Projects" },
+	{ id: "hobbies", num: "04", label: "Hobbies" },
 ];
 
 const Sidebar = ({ activeView, onChange }) => {
