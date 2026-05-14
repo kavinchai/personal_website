@@ -3,9 +3,7 @@
   flex-direction: column;
   gap: 28px;
   min-height: 0;
-  max-height: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
+  height: 100%;
 }
 
 .exp-body {
