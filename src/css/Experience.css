@@ -171,14 +171,8 @@
 
   .exp-tabs {
     flex-direction: row;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;
     padding-bottom: 2px;
-  }
-
-  .exp-tabs::-webkit-scrollbar {
-    display: none;
   }
 
   .exp-tab-year {
@@ -186,7 +180,6 @@
   }
 
   .exp-tab {
-    flex-shrink: 0;
     border-left: none;
     border-bottom: 2px solid var(--border);
   }
