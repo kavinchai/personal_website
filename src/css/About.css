@@ -93,55 +93,6 @@
   min-width: 0;
 }
 
-.about-spotify {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: #1db954;
-  padding: 14px 40px;
-  border-radius: 14px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  transition: all 0.2s ease;
-}
-
-.about-spotify:hover {
-  border-color: #1db954;
-  box-shadow: 0 0 0 1px rgba(29, 185, 84, 0.15);
-}
-
-.about-spotify svg {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-}
-
-.about-spotify-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.about-spotify-title {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.about-spotify-artist {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 @media (max-width: 1024px) {
   .about-stats {
@@ -169,16 +120,4 @@
     white-space: normal;
   }
 
-  .about-spotify {
-    gap: 10px;
-    padding: 10px 14px;
-  }
-
-  .about-spotify-title {
-    font-size: 13px;
-  }
-
-  .about-spotify-artist {
-    font-size: 10px;
-  }
 }
