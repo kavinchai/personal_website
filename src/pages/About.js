@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../css/About.css";
 import "../css/NowPlaying.css";
+import kavinImg from "../imgs/kavin_img.jpg";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -43,68 +44,76 @@ const About = ({ onNavigate }) => {
         </h2>
       </div>
 
-      <div className="about-body">
-        <p>
-          I write code for work, write more code when I get home, and somewhere
-          in between find time to run, take photos, and drink an unreasonable
-          amount of coffee.
-        </p>
-        <p>
-          I'm currently working on{" "}
-          <a
-            href="#progresslog"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate && onNavigate("progresslog");
-            }}
-          >
-            ProgressLog
-          </a>
-          , a web app that lets you log your workouts and track your progress.
-        </p>
-        <p>
-          I also like to play catan, shank golf shots, and butcher
-          Chinese/Korean balads. I'm good at TFT though.
-        </p>
-      </div>
-
-      <div className="about-stats">
-        {STATS.map((s, i) => (
-          <div key={i} className="about-stat">
-            <span className="about-stat-label">{s.label}</span>
-            <span className="about-stat-value">{s.value}</span>
+      <div className="about-row">
+        <div className="about-left">
+          <div className="about-body">
+            <p>
+              I write code for work, write more code when I get home, and somewhere
+              in between find time to run, take photos, and drink an unreasonable
+              amount of coffee.
+            </p>
+            <p>
+              I'm currently working on{" "}
+              <a
+                href="#progresslog"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate && onNavigate("progresslog");
+                }}
+              >
+                ProgressLog
+              </a>
+              , a web app that lets you log your workouts and track your progress.
+            </p>
+            <p>
+              I also like to play catan, shank golf shots, and butcher
+              Chinese/Korean balads. I'm good at TFT though.
+            </p>
           </div>
-        ))}
-      </div>
 
-      {topTrack && (
-        <div className="about-spotify">
-          <span className="about-stat-label">Currently spamming</span>
-          <a
-            href={topTrack.url}
-            target="_blank"
-            rel="noreferrer"
-            className="np-card np-active"
-          >
-            {topTrack.albumArt && (
-              <img className="np-album-art" src={topTrack.albumArt} alt="Album art" />
-            )}
-            <div className="np-info">
-              <span className="np-label">
-                <SpotifyIcon />
-                Currently Spamming
-              </span>
-              <span className="np-title">{topTrack.name}</span>
-              <span className="np-artist">{topTrack.artist}</span>
+          <div className="about-stats">
+            {STATS.map((s, i) => (
+              <div key={i} className="about-stat">
+                <span className="about-stat-label">{s.label}</span>
+                <span className="about-stat-value">{s.value}</span>
+              </div>
+            ))}
+          </div>
+
+          {topTrack && (
+            <div className="about-spotify">
+              <span className="about-stat-label">Currently spamming</span>
+              <a
+                href={topTrack.url}
+                target="_blank"
+                rel="noreferrer"
+                className="np-card np-active"
+              >
+                {topTrack.albumArt && (
+                  <img className="np-album-art" src={topTrack.albumArt} alt="Album art" />
+                )}
+                <div className="np-info">
+                  <span className="np-label">
+                    <SpotifyIcon />
+                    Currently Spamming
+                  </span>
+                  <span className="np-title">{topTrack.name}</span>
+                  <span className="np-artist">{topTrack.artist}</span>
+                </div>
+                <div className="np-bars">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </a>
             </div>
-            <div className="np-bars">
-              <span />
-              <span />
-              <span />
-            </div>
-          </a>
+          )}
         </div>
-      )}
+
+        <div className="about-image">
+          <img src={kavinImg} alt="Kavin eating a pizza" />
+        </div>
+      </div>
     </div>
   );
 };

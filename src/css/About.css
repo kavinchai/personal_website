@@ -10,6 +10,34 @@
   margin-bottom: auto;
 }
 
+.about-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  min-width: 0;
+}
+
+.about-image {
+  flex: 0 0 320px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
 @media (max-width: 1024px) {
   .about-view {
     height: auto;
@@ -17,6 +45,23 @@
     overflow-y: visible;
     padding-right: 0;
     gap: 32px;
+  }
+
+  .about-row {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about-left {
+    gap: 32px;
+  }
+
+  .about-image {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+    order: -1;
   }
 
   .about-body p {
