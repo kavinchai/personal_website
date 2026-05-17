@@ -12,7 +12,6 @@ const STATS = [
   { label: "Currently at", value: "Wells Fargo" },
   { label: "Based in", value: "New York" },
   { label: "Hobbies", value: "Photography, Running, TFT" },
-  { label: "Currently spamming", value: null, spotify: true },
 ];
 
 const About = ({ onNavigate }) => {
@@ -71,44 +70,41 @@ const About = ({ onNavigate }) => {
 
       <div className="about-stats">
         {STATS.map((s, i) => (
-          <div key={i} className={`about-stat${s.spotify ? " about-stat--spotify" : ""}`}>
+          <div key={i} className="about-stat">
             <span className="about-stat-label">{s.label}</span>
-            {s.spotify ? (
-              <span className="about-stat-value">
-                {topTrack ? (
-                  <a
-                    href={topTrack.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="np-card np-active"
-                  >
-                    {topTrack.albumArt && (
-                      <img className="np-album-art" src={topTrack.albumArt} alt="Album art" />
-                    )}
-                    <div className="np-info">
-                      <span className="np-label">
-                        <SpotifyIcon />
-                        Currently Spamming
-                      </span>
-                      <span className="np-title">{topTrack.name}</span>
-                      <span className="np-artist">{topTrack.artist}</span>
-                    </div>
-                    <div className="np-bars">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  </a>
-                ) : (
-                  "..."
-                )}
-              </span>
-            ) : (
-              <span className="about-stat-value">{s.value}</span>
-            )}
+            <span className="about-stat-value">{s.value}</span>
           </div>
         ))}
       </div>
+
+      {topTrack && (
+        <div className="about-spotify">
+          <span className="about-stat-label">Currently spamming</span>
+          <a
+            href={topTrack.url}
+            target="_blank"
+            rel="noreferrer"
+            className="np-card np-active"
+          >
+            {topTrack.albumArt && (
+              <img className="np-album-art" src={topTrack.albumArt} alt="Album art" />
+            )}
+            <div className="np-info">
+              <span className="np-label">
+                <SpotifyIcon />
+                Currently Spamming
+              </span>
+              <span className="np-title">{topTrack.name}</span>
+              <span className="np-artist">{topTrack.artist}</span>
+            </div>
+            <div className="np-bars">
+              <span />
+              <span />
+              <span />
+            </div>
+          </a>
+        </div>
+      )}
     </div>
   );
 };

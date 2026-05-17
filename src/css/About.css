@@ -88,12 +88,13 @@
   white-space: nowrap;
 }
 
-.about-stat--spotify {
-  flex: 1 1 100%;
+.about-spotify {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   min-width: 0;
   max-width: 100%;
 }
-
 
 @media (max-width: 1024px) {
   .about-stats {
@@ -104,10 +105,6 @@
 
   .about-stat-value {
     font-size: 15px;
-  }
-
-  .about-stat--spotify {
-    flex: 1 1 100%;
   }
 }
 
