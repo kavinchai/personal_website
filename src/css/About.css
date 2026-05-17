@@ -60,7 +60,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 24px 40px;
+  gap: 24px 60px;
   max-width: 960px;
 }
 
@@ -97,7 +97,7 @@
 @media (max-width: 1024px) {
   .about-stats {
     flex-wrap: wrap;
-    gap: 20px 32px;
+    gap: 20px 48px;
     max-width: 100%;
   }
 
@@ -112,12 +112,12 @@
 
 @media (max-width: 480px) {
   .about-stats {
-    gap: 16px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .about-stat-value {
     font-size: 14px;
     white-space: normal;
   }
-
 }
